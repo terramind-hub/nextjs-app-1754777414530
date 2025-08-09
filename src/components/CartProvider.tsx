@@ -30,7 +30,7 @@ type CartAction =
   | { type: 'CLEAR_CART' }
   | { type: 'LOAD_CART'; payload: { items: CartItem[] } };
 
-const CartContext = createContext<CartContextType | undefined>(undefined);
+export const CartContext = createContext<CartContextType | undefined>(undefined);
 
 const calculateTotal = (items: CartItem[]): number => {
   return items.reduce((total, item) => total + (item.product.price * item.quantity), 0);

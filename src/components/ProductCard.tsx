@@ -15,10 +15,10 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
-  const { addToCart } = useCart();
+  const { addItem } = useCart();
 
   const handleAddToCart = () => {
-    addToCart(product);
+    addItem(product);
   };
 
   return (
